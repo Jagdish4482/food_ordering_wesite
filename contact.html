@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Contact us · Order help</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background: #fff8f0;
+  color: #333;
+}
+
+/* 🧭 Header */
+header {
+  background: #ff6600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  color: white;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+nav a:hover {
+  color: #ffe600;
+  text-shadow: 0 0 5px #fff;
+}
+#orderBtn {
+  background: #ffe600;
+  border: none;
+  padding: 4px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  
+}
+#orderBtn:hover {
+  transform: scale(1.05);
+  background: #ffcc00;
+}
+:root{
+  --bg:#F1F6EF; --surface:#FFFFFF; --ink:#10281E; --muted:#51655A; --line:#D2DDD3;
+  --accent:#E03A1E; --accent-ink:#FFFFFF; --mark:#FFD23F; --herb:#1F6B45; --err:#B3261E;
+  --display:"Bricolage Grotesque","Trebuchet MS",system-ui,sans-serif;
+  --body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0D1A14; --surface:#152A20; --ink:#EAF4EC; --muted:#A5BBAC; --line:#28413373;
+    --line:#2A4436; --accent:#FF6A4D; --accent-ink:#1A0A06; --herb:#6CCB92; --err:#FF8A80; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0D1A14; --surface:#152A20; --ink:#EAF4EC; --muted:#A5BBAC; --line:#2A4436;
+  --accent:#FF6A4D; --accent-ink:#1A0A06; --herb:#6CCB92; --err:#FF8A80; color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.6 var(--body)}
+.wrap{max-width:1100px;margin:0 auto;padding:clamp(2rem,6vw,4.5rem) clamp(1.25rem,4vw,2rem)}
+.grid{display:grid;grid-template-columns:1fr;gap:3rem}
+@media(min-width:880px){.grid{grid-template-columns:5fr 6fr;gap:4.5rem;align-items:start}}
+
+h1{font:800 clamp(2.5rem,7.5vw,5rem)/.97 var(--display);letter-spacing:-.03em;margin:0 0 1.25rem}
+h1 span{background:linear-gradient(transparent 60%,var(--mark) 60% 90%,transparent 90%);color:#10281E;padding:0 .1em}
+.lede{color:var(--muted);max-width:36ch;margin:0 0 2rem}
+
+.urgent{background:var(--herb);color:#fff;border-radius:16px;padding:1.1rem 1.25rem;margin-bottom:2rem}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .urgent{color:#0D1A14}}
+:root[data-theme="dark"] .urgent{color:#0D1A14}
+.urgent b{display:block;font:700 1.15rem var(--display)}
+.urgent a{color:inherit;font-weight:600;font-size:1.35rem;text-decoration:none}
+.urgent a:hover{text-decoration:underline}
+.urgent small{display:block;opacity:.9}
+
+dl{margin:0;display:grid;gap:1.1rem}
+dl div{border-left:3px solid var(--accent);padding-left:1rem}
+dt{font-weight:600;font-size:.9rem;color:var(--muted)}
+dd{margin:.1rem 0 0}
+dd a{color:var(--ink);text-decoration-color:var(--accent);text-underline-offset:.2em;text-decoration-thickness:2px}
+dd a:hover{color:var(--accent)}
+
+form{background:var(--surface);border:1.5px solid var(--line);border-radius:20px;padding:clamp(1.25rem,4vw,2.25rem);display:grid;gap:1.25rem}
+form h2{font:700 1.5rem/1.2 var(--display);margin:0}
+fieldset{border:0;margin:0;padding:0;display:grid;gap:.6rem}
+legend{font-weight:600;font-size:.95rem;padding:0;margin-bottom:.4rem}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem}
+.chips input{position:absolute;opacity:0;width:1px;height:1px}
+.chips label{font-weight:500;border:1.5px solid var(--line);border-radius:999px;padding:.5rem 1rem;cursor:pointer;background:var(--bg)}
+.chips label:hover{border-color:var(--accent)}
+.chips input:checked+label{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.chips input:focus-visible+label{outline:3px solid var(--accent);outline-offset:2px}
+
+.field{display:grid;gap:.4rem}
+.row{display:grid;gap:1.25rem}
+@media(min-width:560px){.row{grid-template-columns:1fr 1fr}}
+label.l{font-weight:600;font-size:.95rem}
+input[type=text],input[type=email],input[type=tel],textarea{font:inherit;color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:10px;padding:.75rem .9rem;width:100%}
+textarea{min-height:8rem;resize:vertical}
+::placeholder{color:var(--muted);opacity:.8}
+input:focus-visible,textarea:focus-visible,button:focus-visible,a:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+input:focus,textarea:focus{border-color:var(--accent)}
+.hint{color:var(--muted);font-size:.875rem}
+.error{color:var(--err);font-size:.875rem;min-height:1.1em}
+[aria-invalid="true"]{border-color:var(--err)}
+#orderField[hidden]{display:none}
+.foot{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+button{font:600 1.0625rem var(--body);background:var(--accent);color:var(--accent-ink);border:0;border-radius:12px;padding:.85rem 1.75rem;cursor:pointer;transition:transform .15s ease}
+button:hover{transform:translateY(-2px)}
+.done{display:none;background:var(--surface);border:1.5px solid var(--line);border-radius:20px;padding:2.25rem}
+.done h2{font:700 1.5rem var(--display);margin:0 0 .5rem}
+.done p{color:var(--muted);margin:0 0 1rem}
+.done button{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+.sent form{display:none}
+.sent .done{display:block}
+@media(prefers-reduced-motion:reduce){button{transition:none}button:hover{transform:none}}
+</style>
+</head>
+<body>
+
+<header>
+    <div class="logo">🍔 Fast Food Hub</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="deals.html">Deals</a>
+      <a href="aboutus.html">About Us</a>
+      <button id="orderBtn"><a href="menu.html">Order Now</a></button>
+    </nav>
+  </header>
+
+<main class="wrap">
+  <div class="grid" id="grid">
+    <section>
+      <h1>Need help with <span>your order?</span></h1>
+      <p class="lede">Tell us what happened and we’ll sort it out. Have your order number ready and we can answer faster.</p>
+
+      <div class="urgent">
+        <b>Order on the way right now?</b>
+        <a href="tel:+910000000000">+91 00000 00000</a>
+        <small>Call us for live delivery issues. Open daily, 11 am to 11 pm.</small>
+      </div>
+
+      <dl>
+        <div><dt>Email</dt><dd><a href="mailto:support@yourfoodsite.com">support@yourfoodsite.com</a></dd></div>
+        <div><dt>Delivery area</dt><dd>Ludhiana and nearby areas</dd></div>
+        <div><dt>Catering and bulk orders</dt><dd>Orders for 20 or more people need 24 hours’ notice.</dd></div>
+        <div><dt>Refunds</dt><dd>Approved refunds reach your account in 3 to 5 working days.</dd></div>
+      </dl>
+    </section>
+
+    <div>
+      <form id="form" novalidate>
+        <h2>Send us a message</h2>
+
+        <fieldset>
+          <legend>What do you need help with?</legend>
+          <div class="chips">
+            <span><input type="radio" name="topic" id="t1" value="Problem with my order" checked><label for="t1">Problem with my order</label></span>
+            <span><input type="radio" name="topic" id="t2" value="Delivery question"><label for="t2">Delivery</label></span>
+            <span><input type="radio" name="topic" id="t3" value="Catering or bulk order"><label for="t3">Catering or bulk order</label></span>
+            <span><input type="radio" name="topic" id="t4" value="Feedback"><label for="t4">Feedback</label></span>
+          </div>
+        </fieldset>
+
+        <div class="row">
+          <div class="field">
+            <label class="l" for="name">Your name</label>
+            <input type="text" id="name" autocomplete="name" placeholder="Jane Doe">
+            <div class="error" id="e-name" aria-live="polite"></div>
+          </div>
+          <div class="field">
+            <label class="l" for="email">Email address</label>
+            <input type="email" id="email" autocomplete="email" placeholder="jane@example.com">
+            <div class="error" id="e-email" aria-live="polite"></div>
+          </div>
+        </div>
+
+        <div class="field" id="orderField">
+          <label class="l" for="order">Order number</label>
+          <input type="text" id="order" placeholder="For example, #10482">
+          <span class="hint">Find it in your confirmation email or under My orders.</span>
+        </div>
+
+        <div class="field">
+          <label class="l" for="msg">Message</label>
+          <textarea id="msg" maxlength="1000" placeholder="Tell us what went wrong, or what you’d like to know."></textarea>
+          <div class="error" id="e-msg" aria-live="polite"></div>
+        </div>
+
+        <div class="foot">
+          <span class="hint">We reply within a few hours, 11 am to 11 pm.</span>
+          <button type="submit">Send message</button>
+        </div>
+      </form>
+
+      <div class="done" id="done" role="status">
+        <h2>Your message is ready to send</h2>
+        <p>Your email app should have opened with everything filled in. If it didn’t, write to support@yourfoodsite.com.</p>
+        <button type="button" id="again">Write another message</button>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script>
+(function(){
+  var TO="support@1yourfoodsite.com"; // change to your address
+  var form=document.getElementById("form"), grid=document.getElementById("grid");
+  var orderField=document.getElementById("orderField");
+
+  function syncOrder(){
+    var v=form.querySelector("input[name=topic]:checked").value;
+    orderField.hidden=!(v==="Problem with my order"||v==="Delivery question");
+  }
+  form.addEventListener("change",syncOrder);syncOrder();
+
+  function check(id,ok,text){
+    var el=document.getElementById(id), err=document.getElementById("e-"+id);
+    err.textContent=ok?"":text;
+    if(ok){el.removeAttribute("aria-invalid");}else{el.setAttribute("aria-invalid","true");}
+    return ok;
+  }
+  form.addEventListener("submit",function(e){
+    e.preventDefault();
+    var n=document.getElementById("name").value.trim();
+    var m=document.getElementById("email").value.trim();
+    var t=document.getElementById("msg").value.trim();
+    var a=check("name",n.length>0,"Enter your name.");
+    var b=check("email",/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(m),"Enter a valid email address, like jane@example.com.");
+    var c=check("msg",t.length>=10,"Write at least 10 characters.");
+    if(!(a&&b&&c)){form.querySelector("[aria-invalid]").focus();return;}
+    var topic=form.querySelector("input[name=topic]:checked").value;
+    var order=document.getElementById("order").value.trim();
+    var subject=topic+(order&&!orderField.hidden?" ("+order+")":"");
+    var body=t+"\n\n— "+n+" ("+m+")";
+    window.location.href="mailto:"+TO+"?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(body);
+    grid.classList.add("sent");
+  });
+  document.getElementById("again").addEventListener("click",function(){
+    form.reset();syncOrder();grid.classList.remove("sent");
+  });
+})();
+</script>
+</body>
+</html>

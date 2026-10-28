@@ -1,0 +1,92 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background: #fff8f0;
+  color: #333;
+}
+
+/* 🧭 Header */
+header {
+  background: #ff6600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  color: white;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+nav a:hover {
+  color: #ffe600;
+  text-shadow: 0 0 5px #fff;
+}
+#orderBtn {
+  background: #ffe600;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#orderBtn:hover {
+  transform: scale(1.05);
+  background: #ffcc00;
+}
+.about-section {
+      background: #fff;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .about-section h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      color: #222;
+    }
+    .about-section p {
+      max-width: 800px;
+      margin: 10px auto;
+      line-height: 1.6;
+      font-size: 1.1em;
+      color: red;
+    }
+    .about-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 40px;
+    }
+    .card {
+      background: lightsalmon;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 15px;
+      width: 250px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card h3 {
+      margin-bottom: 10px;
+      color: #444;
+    }
+    .card p {
+      font-size: 0.95em;
+      color: #555;
+    }
+
+    /* 🧾 Footer */
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 15px;
+} 
+  

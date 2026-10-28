@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Orders</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff8f0;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #ff6600;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    header h1 { margin: 0; }
+    .orders {
+      padding: 30px;
+      max-width: 800px;
+      margin: auto;
+    }
+    .order-item {
+      display: flex;
+      justify-content: space-between;
+      background: #fff;
+      padding: 15px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .order-item h3 {
+      margin: 0;
+      color: #333;
+    }
+    .order-item .price {
+      font-weight: bold;
+      color: #ff3300;
+    }
+    .total {
+      text-align: right;
+      font-size: 1.3em;
+      margin-top: 20px;
+      font-weight: bold;
+      color: #222;
+    }
+    button {
+      background: #ff6600;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    button:hover {
+      background: #e65c00;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">🍔 Fast Food Hub</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="deals.html">Deals</a>
+      <a href="aboutus.html">About Us</a>
+      <a href="contact.html">Contact</a>
+      <button id="orderBtn"><a href="menu.html">Order Now</a></button>
+    </nav>
+  </header>
+
+<header>
+  <h1>🛒 My Orders</h1>
+</header>
+
+<section class="orders">
+  <div class="order-item">
+    <h3>Classic Burger</h3>
+    <div class="price">₹120</div>
+  </div>
+  <div class="order-item">
+    <h3>Crispy Fries</h3>
+    <div class="price">₹70</div>
+  </div>
+  <div class="order-item">
+    <h3>Choco Sundae</h3>
+    <div class="price">₹60</div>
+  </div>
+
+  <div class="total">Total: ₹250</div>
+  <button>Proceed to Checkout</button>
+</section>
+
+
+
+</body>
+</html>

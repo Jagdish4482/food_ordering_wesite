@@ -1,0 +1,171 @@
+/* 🌐 Global Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background: #fff8f0;
+  color: #333;
+}
+
+/* 🧭 Header */
+header {
+  background: #ff6600;
+  display: flex;
+  justify-content: space-between; /* space between logo and nav */
+  align-items: center;            /* vertically center items */
+  padding: 10px 20px;
+  color: white;
+  height: 30px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.2em;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 500;
+  transition: 0.3s;
+  margin-right: 20px;
+}
+
+nav a:hover {
+  color: #ffe600;
+  text-shadow: 0 0 5px #fff;
+}
+
+#orderBtn {
+  background: #ffe600;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-left: 20px; /* spacing from nav links */
+  font-size: 12px;
+  width: 130px;
+  height: 30px;
+}
+
+#orderBtn:hover {
+  transform: scale(1.05);
+  background: #ffcc00;
+}
+
+
+
+/* 🍔 Menu Section */
+.menu-section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.menu-section h2 {
+  color: #ff6600;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.item {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  transition: transform 0.3s;
+  text-align: center; /* center text inside cards */
+}
+
+.item:hover {
+  transform: translateY(-5px);
+}
+
+.item img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.item h3 {
+  margin: 10px 0 5px;
+  color: #222;
+}
+
+.item p {
+  color: #555;
+  font-size: 1em;
+}
+
+.price {
+  font-weight: bold;
+  color: #ff6600;
+  margin-top: 5px;
+}
+
+/* 🖱️ Button (if used outside menu cards) */
+button {
+  cursor: pointer;
+  display: block;
+  margin: 20px auto; /* centers button horizontally */
+  width: 300px;
+  height: 40px;
+  font-size: 20px;
+}
+
+.btn {
+  background-color: #ff6600;   /* orange background */
+  color: white;                /* white text */
+  border: none;                /* remove border */
+  padding: 10px 20px;          /* space inside button */
+  border-radius: 5px;          /* rounded corners */
+  font-size: 16px;             /* text size */
+  cursor: pointer;             /* pointer on hover */
+  transition: 0.3s;            /* smooth hover effect */
+}
+
+.btn:hover {
+  background-color: #ffcc00;   /* lighter orange on hover */
+  transform: scale(1.05);      /* slight zoom effect */
+}
+
+.bt{
+  border-radius: 5px;
+  transform: scale(1.05);
+  background-color:lightgreen;
+}
+
+.menu-grid {
+  display: flex;          /* arrange children horizontally */
+  justify-content: center; /* center them */
+  gap: 20px;              /* space between items */
+}
+.item {
+  width: 350px;           /* control each card size */
+  text-align: center;     /* center text under image */
+}
+.item img {
+  width: 200px;            /* make image fit card */
+  height: auto;           /* keep proportions */
+}
+
+
+/* 📌 Footer */
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
